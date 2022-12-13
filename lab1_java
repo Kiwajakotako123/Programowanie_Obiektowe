@@ -1,0 +1,208 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Main {
+    public static void zadanie1a(){
+        System.out.println("Podaj n");
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int suma = 0;
+        int a = 0;
+        for(int i = 0; i < n; i++) {
+            System.out.println("a");
+            a = input.nextInt();
+            suma += a;
+        };
+        System.out.println("suma: "+suma);
+    }
+    public static void zadanie1b(){
+        System.out.println("Podaj n");
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int suma = 1;
+        int a = 0;
+        for(int i = 0; i < n; i++) {
+            System.out.println("a");
+            a = input.nextInt();
+            suma *= a;
+        };
+        System.out.println("wynik: "+suma);
+    }
+
+    public static void zadanie1c(){
+        System.out.println("Podaj n");
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int suma = 0;
+        int a = 0;
+        for(int i = 0; i < n; i++) {
+            System.out.println("a");
+            a = input.nextInt();
+            if(a < 0){a = a * -1;}
+            suma += a;
+        };
+        System.out.println("wynik: "+suma);
+    }
+
+    public static void zadanie1d(){
+        System.out.println("Podaj n");
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int suma = 0;
+        int a = 0;
+        for(int i = 0; i < n; i++) {
+            System.out.println("a");
+            a = input.nextInt();
+            if(a < 0){a = a * -1;}
+            suma += Math.sqrt(a);
+        };
+        System.out.println("wynik: "+suma);
+    }
+
+    public static void zadanie1e(){
+        System.out.println("Podaj n");
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int suma = 1;
+        int a = 0;
+        for(int i = 0; i < n; i++) {
+            System.out.println("a");
+            a = input.nextInt();
+            if(a < 0){a = a * -1;}
+            suma *= a;
+        };
+        System.out.println("wynik: "+suma);
+    }
+
+    public static void zadanie1f(){
+        System.out.println("Podaj n");
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int suma = 0;
+        int a = 0;
+        for(int i = 0; i < n; i++) {
+            System.out.println("a");
+            a = input.nextInt();
+            a = a*a;
+            suma += a;
+        };
+        System.out.println("wynik: "+suma);
+    }
+
+    public static void zadanie1g(){
+        System.out.println("Podaj n");
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int suma = 0;
+        int wynik = 1;
+        int a = 0;
+        for(int i = 0; i < n; i++) {
+            System.out.println("a");
+            a = input.nextInt();
+            suma += a;
+            wynik *= a;
+        };
+        System.out.println("a1+a2+...*an = "+suma+"       a1*a2*...*an = "+wynik);
+    }
+
+    public static void zadanie1h(){
+        System.out.println("Podaj n");
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int suma = 0;
+        int a = 0;
+        for(int i = 2; i < n+2; i++) {
+            System.out.println("a");
+            a = input.nextInt();
+            if(i%2 == 0){suma += a;}else{suma -= a;};
+        };
+        System.out.println("wynik: "+suma);
+    }
+
+    public static long factorialUsingForLoop(int n) {
+        long fact = 1;
+        for (int i = 2; i <= n; i++) {
+            fact = fact * i;
+        }
+        return fact;
+    }
+    public static void zadanie1j(){
+        System.out.println("Podaj n");
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int suma = 0;
+        double a = 0;
+        for(int i = 0; i < n; i++) {
+            System.out.println("a");
+            a = input.nextDouble();
+            a = a/factorialUsingForLoop(i);
+            if(i%2 == 0){suma += a;}else{suma -= a;};
+        };
+        System.out.println("wynik: "+suma);
+    }
+
+    public static void zadanie2(){
+        System.out.println("Podaj n");
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int[] tablica = new int[n];
+        int a = 0;
+        for(int i = 0; i < n; i++) {
+            System.out.println("a");
+            a = input.nextInt();
+            tablica[i] = a;
+        };
+        for(int i = 0; i < n; i++) {
+            System.out.println(tablica[i]);
+        };
+    }
+
+    public static void zadanie21ab(){
+        System.out.println("Podaj n");
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int licznik = 0;
+        int licznik2 = 0;
+        int a = 0;
+        for(int i = 0; i < n; i++) {
+            System.out.println("a");
+            a = input.nextInt();
+            if(a%2 != 0){licznik++;}
+            if(a%3 == 0 && a%5 != 0){licznik2++;}
+        };
+        System.out.println("jest "+licznik+" nieparzystych");
+        System.out.println("jest "+licznik2+" podzielnych przez 3 a przez 5 juz nie");
+    }
+
+    public static void zadanie21c(){
+        System.out.println("Podaj n");
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int licznik = 0;
+        int a = 0;
+        for(int i = 0; i < n; i++) {
+            System.out.println("a");
+            a = input.nextInt();
+            if(Math.sqrt(a)%2 ==0){licznik++;}
+        };
+        System.out.println(licznik);
+    }
+
+    public static void zadanie22(){
+        System.out.println("Podaj n");
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int wynik = 0;
+        int a = 0;
+        for(int i = 0; i < n; i++) {
+            System.out.println("a");
+            a = input.nextInt();
+            if(a > 0){wynik+= 1*2;}
+        };
+        System.out.println(wynik);
+    }
+
+    public static void main(String[] args) {
+        zadanie22();
+    }
+}
